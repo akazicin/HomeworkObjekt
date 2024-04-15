@@ -1,20 +1,21 @@
 public class Book {
     private final Author author;
-    private String book;
+    private String nameBook;
     private int yearRelease;
 
 
-    public Book(Author author, String book, int yearRelease){
+    public Book(Author author, String nameBook, int yearRelease) {
         this.author = author;
-        this.book = book;
+        this.nameBook = nameBook;
         this.yearRelease = yearRelease;
     }
 
     public Author getAuthor() {
         return author;
     }
-    public String getBook() {
-        return book;
+
+    public String getNameBook() {
+        return nameBook;
     }
 
     public int getYearRelease() {
@@ -25,5 +26,14 @@ public class Book {
     public void setYearRelease(int yearRelease) {
         this.yearRelease = yearRelease;
     }
+
+    @Override
+    public String toString() {
+        return author.getFirstName() + " " + author.getSecondName() + " " + nameBook + " "
+                + yearRelease;
+    }
 }
+
+
+
 
